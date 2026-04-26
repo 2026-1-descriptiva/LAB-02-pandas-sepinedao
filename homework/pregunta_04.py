@@ -9,7 +9,7 @@ librerias de pandas para resolver las preguntas.
 def pregunta_04():
 
     import pandas as pd
-    df = pd.read_csv('files\input\tbl0.tsv', sep='\t')
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
     promedio_c1 = df.groupby('c1').c2.mean()
 
 

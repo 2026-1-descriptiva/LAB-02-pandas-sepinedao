@@ -9,7 +9,7 @@ librerias de pandas para resolver las preguntas.
 def pregunta_10():
 
     import pandas as pd
-    df = pd.read_csv('files\input\tbl0.tsv', sep='\t')
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
     
     tabla_respuesta = df.groupby('c1').apply(lambda x: ':'.join(x['c2'].sort_values().astype(str)))
     tabla_respuesta = tabla_respuesta.to_frame(name="c2")

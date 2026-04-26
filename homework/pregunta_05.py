@@ -9,7 +9,7 @@ librerias de pandas para resolver las preguntas.
 def pregunta_05():
 
     import pandas as pd
-    df = pd.read_csv('files\input\tbl0.tsv', sep='\t')
+    df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
     maximo_c1 = df.groupby('c1').c2.max()
 
 
