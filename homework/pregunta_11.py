@@ -7,7 +7,18 @@ librerias de pandas para resolver las preguntas.
 
 
 def pregunta_11():
-    """
+     import pandas as pd
+     df = pd.read_csv('files\input\tbl1.tsv', sep='\t')
+     tabla_respuesta = df.groupby('c0').apply(lambda x: ','.join(x['c4'].sort_values().astype(str)))
+     tabla_respuesta = tabla_respuesta.to_frame(name="c4")
+     tabla_respuesta.index.name = "c0"
+     tabla_respuesta.reset_index(inplace=True)
+
+     return tabla_respuesta
+
+
+
+     """
     Construya una tabla que contenga `c0` y una lista separada por ',' de
     los valores de la columna `c4` del archivo `tbl1.tsv`.
 
@@ -22,3 +33,5 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
+
+print(pregunta_11())
