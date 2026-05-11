@@ -10,10 +10,8 @@ def pregunta_03():
 
     import pandas as pd
     df = pd.read_csv('files/input/tbl0.tsv', sep='\t')
-
-    letras_en_c1 = df.c1.value_counts()
-    letras_en_c1.sort_index(inplace=True)
-    return letras_en_c1
+    resultado = df.groupby('c1').size()
+    return resultado
 
 
     """
